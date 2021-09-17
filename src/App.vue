@@ -39,6 +39,13 @@
     <b>Name</b>: {{emp.name}},<br/>
     <b>Salary</b>: {{emp.Salary}},<br/><br/><br/>
   </div>
+  <hr/>
+<div v-bind:key="std.studentId" v-for="std in students"> 
+    <b>studentId :</b> {{std.studentId}},<br/>
+    <b>firstname :</b> {{std.firstname}},<br/>
+    <b>lastname :</b> {{std.lastname}},<br/>
+    <b>sscore :</b> {{std.score}},<br/><br/><br/>
+  </div>
 
 
     <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
@@ -64,7 +71,10 @@ export default {
       htmlText: "<b>HTML TEXT</b>&nbsp:",
       counter: 0,
       isGreeting: true,
-      employees:[{"id":1,"name":"John","Salary":30000},{"id":2,"name":"Trump","Salary":10000},{"id":3,"name":"Peter","Salary":99000}]
+      students: [{"studentId":624235052,"firstname": "Wanasree","lastname":"Sahasantiwarakul","score":"100"},
+      {"studentId":624235048,"firstname": "Warinthon","lastname":"Kongjan","score":"100"},
+      {"studentId":624235054,"firstname": "Phongpol","lastname":"Nithiverod","score":"100"},
+      {"studentId":624235053,"firstname": "Sofwan","lastname":"Jehmuso","score":"100"}]
     }
   },
   methods: {
